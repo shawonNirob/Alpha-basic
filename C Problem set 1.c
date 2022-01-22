@@ -501,3 +501,37 @@ int main(){
     return 0;
 }
 //
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+
+int main(){
+    while(1){
+        int num;
+        printf("\nplease enter a number:");
+        scanf("%d",&num);
+        int m,n=m=num,r,p=0;
+        while(num>0){
+            num=num/10;
+            p++;
+        }
+        printf("%d\n", p);
+
+        int sum=0;
+        while(n>0){
+            r=n%10;
+            sum+= pow(r,p);
+            n=n/10;
+        }
+        if(sum==m){
+            printf("%d is a armstrong number\n", m);
+        }
+        else{
+            printf("%d is not a armstrong number\n", m);
+        }
+    }
+
+    return 0;
+}
+//
