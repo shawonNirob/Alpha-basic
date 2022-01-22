@@ -518,10 +518,11 @@ int main(){
         }
         printf("%d\n", p);
 
-        int sum=0;
+        double sum=0;
         while(n>0){
             r=n%10;
-            sum+= pow(r,p);
+            double power=pow(r,p);
+            sum+= power;
             n=n/10;
         }
         if(sum==m){
@@ -534,7 +535,9 @@ int main(){
 
     return 0;
 }
+
 //
 
+    
 
 
