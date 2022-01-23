@@ -653,6 +653,74 @@ int main(){
     return 0;
 }
 //
+32.
+#include <stdio.h>
+int main() {
+  while(1){
+  double a, b;
+  printf("Enter a: ");
+  scanf("%lf", &a);
+  printf("Enter b: ");
+  scanf("%lf", &b);
 
+  a = a - b;
+  printf("a=%lf\n", a);
+
+  b = a + b;
+  printf("b=%lf\n", b);
+
+  a = b - a;
+
+  printf("After swapping, a = %.2lf\n", a);
+  printf("After swapping, b = %.2lf\n", b);
+  }
+  return 0;
+}
+//
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+
+int main(){
+        int n;
+        printf("\nPlease enter a number: ");
+        scanf("%d", &n);
+
+        int num=1;
+        while(num<=n/2){
+            if(n%num==0){
+                printf("%d\t", num);
+            }
+            ++num;
+        }
+        printf("%d\t", n);
+
+    return 0;
+}
+//
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+
+int main(){
+        int n;
+        printf("\nPlease enter a number: ");
+        scanf("%d", &n);
+
+        int num=1;
+        while(num<=n){
+            if(n%num==0){
+                printf("%d\t", num);
+            }
+            ++num;
+        }
+
+
+    return 0;
+}
+//
+33.
 
 
