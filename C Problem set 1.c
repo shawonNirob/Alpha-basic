@@ -722,5 +722,137 @@ int main(){
 }
 //
 33.
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+
+int main(){
+        while(1){
+            char c;
+            double n1, n2;
+            printf("enter a operator: ");
+            scanf("%c", &c);
+            printf("enter two operants: ");
+            scanf("%lf %lf", &n1, &n2);
+
+            switch(c){
+                case '+':
+                    printf("%lf + %lf = %lf\n", n1, n2, n1+n2);
+                    break;
+                case '-':
+                    printf("%lf - %lf = %lf\n", n1, n2, n1-n2);
+                    break;
+                case '*':
+                    printf("%lf * %lf = %lf\n", n1, n2, n1*n2);
+                    break;
+                case '/':
+                    printf("%lf / %lf = %lf\n", n1, n2, n1/n2);
+                    break;
+                default:
+                printf("exception! invalid operator");
+            }
+        }
+
+
+    return 0;
+}
+//
+34.
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+int primeCheck(int low, int high);
+
+int main(){
+    while(1){
+        int low , high;
+        printf("\nplease enter two number:");
+        scanf("%d %d", &low, &high);
+        primeCheck(low, high);
+
+    }
+    return 0;
+}
+int primeCheck(int low, int high){
+    while(low<high){
+            if(low<=1){
+                low++;
+                continue;
+            }
+            int temp=0;
+            for(int i=2; i<low/2; i++){
+                if(low%i==0){
+                    temp=1;
+                    break;
+                    }
+                }
+            if(temp==0){
+                printf("%d\t", low);
+            }
+            low++;
+        }
+        return 0;
+
+}
+//
+35.
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+void primeCheck(int x);
+void armostrongCheck(int n);
+
+int main(){
+    while(1){
+        int num;
+        printf("\nplease enter a number:");
+        scanf("%d",&num);
+        armostrongCheck(num);
+        primeCheck(num);
+    }
+    return 0;
+}
+void primeCheck(int x){
+        int temp=0;
+        for(int i=2; i<=x/2; ++i){
+        if(x%i==0){
+                printf("%d is not prime\n", x);
+                temp=1;
+                break;
+            }
+        }
+        if(temp==0){
+            printf("%d is Prime\n", x);
+        }
+}
+void armostrongCheck(int n){
+        if(n<10){
+            printf("%d is not a armstrong number\n", n);
+            return 0;
+        }
+        int num=n,r,p=0;
+        while(num>0){
+            num=num/10;
+            p++;
+        }
+        num=n;
+        double sum=0;
+        while(num>0){
+            r=num%10;
+            sum+= pow(r,p);
+            num=num/10;
+        }
+        if(sum==n){
+            printf("%d is a armstrong number\n", n);
+        }
+        else{
+            printf("%d is not a armstrong number\n", n);
+        }
+}
+//
+36.
 
 
