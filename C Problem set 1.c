@@ -537,7 +537,122 @@ int main(){
 }
 
 //
+31.
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
 
-    
+int main(){
+    while(1){
+        int n,low, high;
+        printf("\nplease enter two number:");
+        scanf("%d %d", &low, &high);
+
+        for(n=low+1; n<=high; ++n){
+            int m=n;
+            int p=0,r;
+            while(m>0){
+                m=m/10;
+                p++;
+            }
+            m=n;
+            double sum=0;
+            while(m>0){
+                r=m%10;
+                sum+=pow(r,p);
+                m=m/10;
+            }
+            if((int)sum==n){
+                printf("%d\t", n);
+            }
+        }
+    }
+
+    return 0;
+}
+//
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+
+int main(){
+    while(1){
+        int n,low, high;
+        printf("\nplease enter two number:");
+        scanf("%d %d", &low, &high);
+
+        for(n=low+1; n<=high; ++n){
+                if(n<=10){
+                continue;
+                }
+            int m=n;
+            int p=0,r;
+            while(m>0){
+                m=m/10;
+                p++;
+            }
+            m=n;
+            double sum=0;
+            while(m>0){
+                r=m%10;
+                sum+=pow(r,p);
+                m=m/10;
+            }
+            if((int)sum==n){
+                printf("%d\t", n);
+            }
+        }
+        }
+
+    return 0;
+}
+//
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+
+int main(){
+    while(1){
+        int n,low, high;
+        printf("\nplease enter two number(intervals):");
+        scanf("%d %d", &low, &high);
+
+        if(low>high){
+            int temp;
+            temp=low;
+            low=high;
+            high=temp;
+        }
+
+        for(n=low+1; n<=high; ++n){
+                if(n<=10){
+                continue;
+                }
+            int m=n;
+            int p=0,r;
+            while(m>0){
+                m=m/10;
+                p++;
+            }
+            m=n;
+            double sum=0;
+            while(m>0){
+                r=m%10;
+                sum+=pow(r,p);
+                m=m/10;
+            }
+            if((int)sum==n){
+                printf("%d\t", n);
+            }
+        }
+        }
+
+    return 0;
+}
+//
+
 
 
