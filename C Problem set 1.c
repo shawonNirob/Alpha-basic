@@ -855,4 +855,42 @@ void armostrongCheck(int n){
 //
 36.
 
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+int primeCheck(int x);
+int main(){
+    int n;
+    printf("please enter a number: \n");
+    scanf("%d", &n);
+    for(int i=2; i<n; i++){
+        if(primeCheck(i)==1){
+            for(int j=i+1; j<n; ++j){
+                if(primeCheck(j)==1){
+                    if(n==(i+j)){
+                        printf("%d + %d = %d\n", i, j, n);
+                    }
+                }
+            }
+        }
+    }
+
+
+    return 0;
+}
+int primeCheck(int x){
+            int temp=0;
+            for(int i=2; i<=x/2; i++){
+                if(x%i==0){
+                    temp=1;
+                    break;
+                    }
+                }
+            if(temp==0){
+                return 1;
+            }
+        }
+//
+37.
 
