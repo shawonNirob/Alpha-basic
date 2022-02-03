@@ -1,4 +1,3 @@
-
 //https://www.programiz.com/c-programming/examples
 11.
 #include<stdio.h>
